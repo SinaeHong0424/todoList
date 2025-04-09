@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Todo List App</h1>
+    </header>
+    
+    <!-- Sidebar with projects -->
+    <div class="sidebar">
+      <div class="projects-header">
+        <h2>Projects</h2>
+      </div>
+      <ul id="projects-list"></ul>
+      
+      <form id="new-project-form">
+        <input type="text" id="new-project-name" placeholder="New project name" required>
+        <button type="submit" id="new-project-btn">+</button>
+      </form>
+    </div>
+    
+    <!-- Main content with todos -->
+    <div class="main-content">
+      <h2 id="current-project-name"></h2>
+      
+      <!-- Form to add new todo -->
+      <form id="new-todo-form">
+        <div class="form-group">
+          <label for="new-todo-title">Title</label>
+          <input type="text" id="new-todo-title" name="title" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="new-todo-due-date">Due Date</label>
+          <input type="date" id="new-todo-due-date" name="dueDate" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="new-todo-description">Description</label>
+          <textarea id="new-todo-description" name="description"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="new-todo-priority">Priority</label>
+          <select id="new-todo-priority" name="priority">
+            <option value="Low">Low</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        
+        <div class="form-submit">
+          <button type="submit" id="submit-todo">Add Todo</button>
+        </div>
+      </form>
+      
+      <!-- Container for todos -->
+      <div id="todos-container"></div>
+    </div>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+</html>
